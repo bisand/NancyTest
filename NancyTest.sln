@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyTest", "NancyTest\NancyTest.csproj", "{B58A714A-0BAB-42F6-B259-4ED347CFCB46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divan", "..\Divan\src\Divan.csproj", "{37AC0B66-5340-4B81-BC62-3EE80233A011}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divan", "Subs\Divan\src\Divan.csproj", "{37AC0B66-5340-4B81-BC62-3EE80233A011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

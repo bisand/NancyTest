@@ -63,7 +63,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Divan\src\Divan.csproj">
+    <ProjectReference Include="..\Subs\Divan\src\Divan.csproj">
       <Project>{37AC0B66-5340-4B81-BC62-3EE80233A011}</Project>
       <Name>Divan</Name>
     </ProjectReference>
