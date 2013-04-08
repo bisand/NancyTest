@@ -17,6 +17,7 @@ namespace NancyTest.Modules
                     var server = new CouchServer();
                     var db = server.GetDatabase("trivial");
                     var tempView = db.NewTempView("test", "test", "if (doc.docType && doc.docType == 'car') emit(doc.Hps, doc);");
+                    var view = db.Query("car", "ByHps");
                     var linqCars = tempView.LinqQuery<Car>();
                     if (parameters.hp)
                     {
