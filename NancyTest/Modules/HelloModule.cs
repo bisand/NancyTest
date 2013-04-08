@@ -21,8 +21,8 @@ namespace NancyTest.Modules
                     if (parameters.hp)
                     {
                         var hp = (int) parameters.hp;
-                        var fastCars = linqCars.Where(c => c.HorsePowers == hp).ToList();
-                        return Response.AsJson(fastCars);
+                        var car = linqCars.Where(c => c.HorsePowers == hp).ToList();
+                        return Response.AsJson(car);
                     }
                     var cars = linqCars.Where(x=>x.HorsePowers <= 500).ToList();
                     return Response.AsJson(cars);
