@@ -1,0 +1,3 @@
+[submodule "Subs/Divan"]
+	path = Subs/Divan
+	url = https://github.com/foretagsplatsen/Divan.git
