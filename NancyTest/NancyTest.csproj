@@ -70,12 +70,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Subs\Divan\src\Divan.csproj">
-      <Project>{37AC0B66-5340-4B81-BC62-3EE80233A011}</Project>
-      <Name>Divan</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\css\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -94,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Subs\Settee\Settee\Settee.csproj">
+      <Project>{EA71B208-DA4A-4DA5-92F5-EA740477FB75}</Project>
+      <Name>Settee</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
