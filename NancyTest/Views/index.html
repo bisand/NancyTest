@@ -1,0 +1,28 @@
+﻿@Master['master.html']
+
+@Section['Content']
+<div class="row main">
+    <div class="col-golden-large">
+        <article>
+            <hgroup>
+                <h1>Welcome!</h1>
+                <p>This is the biseth.net data service</p>
+            </hgroup>
+                        
+            <section>
+                <h2>Hello @Model.Username, the current time is @Model.CurrentDate</h2>
+            </section>
+        </article>
+                    
+    </div><!-- .col-golden-large -->
+                
+    <div class="col-golden-small">
+        <aside>
+            <h3>Golden Ratio</h3>
+            <p>This is an aside with <code>class=&quot;col-golden-small&quot;</code> and the stuff over there &#8592; has <code>class=&quot;col-golden-large&quot;</code>.</p>
+            <p>They are as close to the golden ratio (62% / 38%) as possible.</p>
+        </aside>
+    </div><!-- .col-golden-small -->
+                
+</div><!-- .row.main -->
+@EndSection

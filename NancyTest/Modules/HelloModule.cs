@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using Divan;
 using Nancy;
@@ -11,12 +11,19 @@ namespace NancyTest.Modules
     {
         public HelloModule()
         {
-            Get["/"] = parameters => "Hello World";
+            Get["/"] = parameters =>
+                {
+                    var indexModel = new IndexModel();
+                    indexModel.Username = "Unknown";
+                    indexModel.CurrentDate = DateTime.Now;
+                    return View["Views/index.html", indexModel];
+                };
             Get["/cars/{hp?}"] = parameters =>
                 {
                     var server = new CouchServer();
                     var db = server.GetDatabase("trivial");
-                    var tempView = db.NewTempView("test", "test", "if (doc.docType && doc.docType == 'car') emit(doc.Hps, doc);");
+                    var tempView = db.NewTempView("test", "test",
+                                                  "if (doc.docType && doc.docType == 'car') emit(doc.Hps, doc);");
                     var view = db.Query("car", "ByHps");
                     var linqCars = tempView.LinqQuery<Car>();
                     if (parameters.hp)
@@ -25,7 +32,7 @@ namespace NancyTest.Modules
                         var car = linqCars.Where(c => c.HorsePowers == hp).ToList();
                         return Response.AsJson(car);
                     }
-                    var cars = linqCars.Where(x=>x.HorsePowers <= 500).ToList();
+                    var cars = linqCars.Where(x => x.HorsePowers <= 500).ToList();
                     return Response.AsJson(cars);
                 };
             Get["/init/{count?100}"] = parameters =>
@@ -34,7 +41,7 @@ namespace NancyTest.Modules
                     var db = server.GetDatabase("trivial");
                     for (var i = 0; i < parameters.count; i++)
                     {
-                        var car = new Car("Saab", "93", 170 + i);
+                        var car = new Car("Saab", (93 + i).ToString(), 170 + i);
                         db.SaveDocument(car);
                     }
                     return string.Format("Generated {0} cars.", parameters.count);
@@ -42,11 +49,17 @@ namespace NancyTest.Modules
         }
     }
 
+    public class IndexModel
+    {
+        public string Username { get; set; }
+        public DateTime CurrentDate { get; set; }
+    }
+
     public class Car : CouchDocument
     {
+        public int HorsePowers;
         public string Make;
         public string Model;
-        public int HorsePowers;
 
         public Car()
         {
@@ -59,6 +72,7 @@ namespace NancyTest.Modules
             Model = model;
             HorsePowers = hps;
         }
+
         #region CouchDocument Members
 
         public override void WriteJson(JsonWriter writer)
@@ -88,5 +102,4 @@ namespace NancyTest.Modules
 
         #endregion
     }
-
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using Nancy.Hosting.Self;
-using RedBranch.Hammock;
 
 namespace NancyTest
 {
@@ -12,11 +10,11 @@ namespace NancyTest
     {
         private static void Main(string[] args)
         {
-            var uri = "http://localhost:8888";
+            const string uri = "http://localhost:8888";
             Console.WriteLine(uri);
             // initialize an instance of NancyHost (found in the Nancy.Hosting.Self package)
             var host = new NancyHost(new Uri(uri));
-            host.Start();  // start hosting
+            host.Start(); // start hosting
 
             //Under mono if you deamonize a process a Console.ReadLine with cause an EOF 
             //so we need to block another way
@@ -30,7 +28,7 @@ namespace NancyTest
                 Console.ReadKey();
             }
 
-            host.Stop();  // stop hosting
+            host.Stop(); // stop hosting
         }
     }
 
