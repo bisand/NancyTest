@@ -1,3 +1,6 @@
 [submodule "Subs/Divan"]
 	path = Subs/Divan
 	url = https://github.com/foretagsplatsen/Divan.git
+[submodule "Subs/Settee"]
+	path = Subs/Settee
+	url = https://bisand:36djond@github.com/bisand/Settee.git
