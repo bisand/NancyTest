@@ -92,9 +92,9 @@
     <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Subs\Settee\Settee\Settee.csproj">
-      <Project>{EA71B208-DA4A-4DA5-92F5-EA740477FB75}</Project>
-      <Name>Settee</Name>
+    <ProjectReference Include="..\Subs\Settee\NetCouch\NetCouch.csproj">
+      <Project>{CFE3D689-160B-4C75-9B83-84E5C622A549}</Project>
+      <Name>NetCouch</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

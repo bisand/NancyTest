@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyTest", "NancyTest\NancyTest.csproj", "{B58A714A-0BAB-42F6-B259-4ED347CFCB46}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settee", "Subs\Settee\Settee\Settee.csproj", "{EA71B208-DA4A-4DA5-92F5-EA740477FB75}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subs", "Subs", "{56444BA0-546E-411B-BA4A-EFA7785C28FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35A21E87-8976-4415-AB4B-48665451120D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetteeTests", "Subs\Settee\SetteeTests\SetteeTests.csproj", "{B5B9235F-C49B-47A6-8F11-66DC708C6F1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCouch", "Subs\Settee\NetCouch\NetCouch.csproj", "{CFE3D689-160B-4C75-9B83-84E5C622A549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCouchTests", "Subs\Settee\NetCouchTests\NetCouchTests.csproj", "{B5B9235F-C49B-47A6-8F11-66DC708C6F1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +23,10 @@ Global
 		{B58A714A-0BAB-42F6-B259-4ED347CFCB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B58A714A-0BAB-42F6-B259-4ED347CFCB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B58A714A-0BAB-42F6-B259-4ED347CFCB46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA71B208-DA4A-4DA5-92F5-EA740477FB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA71B208-DA4A-4DA5-92F5-EA740477FB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA71B208-DA4A-4DA5-92F5-EA740477FB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA71B208-DA4A-4DA5-92F5-EA740477FB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE3D689-160B-4C75-9B83-84E5C622A549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE3D689-160B-4C75-9B83-84E5C622A549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE3D689-160B-4C75-9B83-84E5C622A549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE3D689-160B-4C75-9B83-84E5C622A549}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5B9235F-C49B-47A6-8F11-66DC708C6F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5B9235F-C49B-47A6-8F11-66DC708C6F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5B9235F-C49B-47A6-8F11-66DC708C6F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,8 +36,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EA71B208-DA4A-4DA5-92F5-EA740477FB75} = {56444BA0-546E-411B-BA4A-EFA7785C28FA}
 		{35A21E87-8976-4415-AB4B-48665451120D} = {56444BA0-546E-411B-BA4A-EFA7785C28FA}
+		{CFE3D689-160B-4C75-9B83-84E5C622A549} = {56444BA0-546E-411B-BA4A-EFA7785C28FA}
 		{B5B9235F-C49B-47A6-8F11-66DC708C6F1E} = {35A21E87-8976-4415-AB4B-48665451120D}
 	EndGlobalSection
 EndGlobal
